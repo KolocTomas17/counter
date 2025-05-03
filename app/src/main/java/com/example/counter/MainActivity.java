@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        updateUI(); // První vykreslení
+        updateUI();
 
 
 
