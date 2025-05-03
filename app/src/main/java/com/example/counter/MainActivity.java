@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        tvTotalMl.setText("Vypito celkem " + totalMl + " ml");
+        tvTotalMl.setText("Vypito celkem: " + totalMl + " ml");
 
         Button btnResetAll = findViewById(R.id.btnResetAll);
         btnResetAll.setOnClickListener(v -> {
