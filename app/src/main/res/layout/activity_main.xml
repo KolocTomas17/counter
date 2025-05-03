@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvGoalInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zbývá vypít: 0 ml"
+        android:textSize="32sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Celkový počet v mililitrech -->
+    <TextView
+        android:id="@+id/tvTotalMl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vypito celkem: 0 ml"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etGoal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Denní cíl (ml)"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btnSetGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nastavit cíl"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+
+
+    <!-- Blok pro 750 ml -->
+    <TextView
+        android:text="Sklenice 750 ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnRemove750"
+            android:text="ODEBRAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvCount750"
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+        <Button
+            android:id="@+id/btnAdd750"
+            android:text="PŘIDAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Blok pro 500 ml -->
+    <TextView
+        android:text="Sklenice 500 ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnRemove500"
+            android:text="ODEBRAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvCount500"
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+        <Button
+            android:id="@+id/btnAdd500"
+            android:text="PŘIDAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Blok pro 250 ml -->
+    <TextView
+        android:text="Sklenice 250 ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnRemove250"
+            android:text="ODEBRAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvCount250"
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+        <Button
+            android:id="@+id/btnAdd250"
+            android:text="PŘIDAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnResetAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resetovat vše"
+        android:layout_marginTop="32dp"/>
+
+
+
+
+
+</LinearLayout>
