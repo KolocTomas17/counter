@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/tvTotalMl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vypito celkem 0 ml"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- ZBÝVÁ VYPÍT -->
+    <TextView
+        android:id="@+id/tvRemainingMl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zbývá vypít 0 ml"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"/>
+
+
+    <!-- 250 ml -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/btnRemove250"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="−"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvCount250"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <Button
+            android:id="@+id/btnAdd250"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="250 ml"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- 500 ml -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <Button
+            android:id="@+id/btnRemove500"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="−"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvCount500"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <Button
+            android:id="@+id/btnAdd500"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500 ml"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- 750 ml -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnRemove750"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="−"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvCount750"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <Button
+            android:id="@+id/btnAdd750"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="750 ml"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

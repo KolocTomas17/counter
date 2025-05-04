@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         etGoal.setText(String.valueOf(dailyGoal));
 
 
-
+        //nastavení denního limitu
         btnSetGoal.setOnClickListener(v -> {
             String goalText = etGoal.getText().toString();
             if (!goalText.isEmpty()) {
