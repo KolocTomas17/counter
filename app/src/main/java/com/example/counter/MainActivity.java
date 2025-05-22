@@ -1,11 +1,15 @@
 package com.example.counter;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
             updateUI();
             saveData();
         });
+        setMidnightAlarm();
     }
 
     private void updateUI() {
@@ -142,4 +147,29 @@ public class MainActivity extends AppCompatActivity {
         count750 = prefs.getInt("count750", 0);
         dailyGoal = prefs.getInt("dailyGoal", 3000);
     }
+
+    private void setMidnightAlarm() {
+        android.app.AlarmManager alarmManager = (android.app.AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, MidnightResetReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
+        // Spočítej čas do nejbližší půlnoci
+        java.util.Calendar calendar = java.util.Calendar.getInstance();
+        calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);
+        calendar.set(java.util.Calendar.MINUTE, 0);
+        calendar.set(java.util.Calendar.SECOND, 0);
+        calendar.set(java.util.Calendar.MILLISECOND, 0);
+        calendar.add(java.util.Calendar.DAY_OF_MONTH, 1);
+
+        // Nastav opakovaný alarm na každých 24 hodin od nejbližší půlnoci
+        alarmManager.setRepeating(
+                android.app.AlarmManager.RTC_WAKEUP,
+                calendar.getTimeInMillis(),
+                android.app.AlarmManager.INTERVAL_DAY,
+                pendingIntent
+        );
+    }
+
+
+
 }
